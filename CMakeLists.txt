@@ -56,7 +56,7 @@ file(GLOB_RECURSE NATIVE_SRC "${NATIVE_SOURCE_DIR}/*.cpp")
 add_library(NimCWNative SHARED ${NATIVE_SRC})
 target_include_directories(NimCWNative PRIVATE ${NATIVE_INCLUDE_DIR})
 if(WIN32)
-  target_compile_definitions(NimCWNative PRIVATE EXAMPLE_EXPORTS)
+  target_compile_definitions(NimCWNative PRIVATE NIMCW_BUILD_DLL)
 endif()
 
 set_target_properties(
